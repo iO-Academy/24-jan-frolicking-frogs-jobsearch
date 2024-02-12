@@ -2,6 +2,7 @@
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
 import RecentBox from './Components/RecentBox'
+import SingleJob from './Components/RecentBox/SingleJob'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
     <AllJobs />
     <RecentBox />
+    <SingleJob />
     </>
 
   )

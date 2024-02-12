@@ -3,7 +3,7 @@ import SingleJob from "./SingleJob"
 
 function RecentBox() {
     
-    const [recentJobs, setRecentJobs] = useState('')
+    const [recentJobs, setRecentJobs] = useState([])
     useEffect(getRecentJobs, [])
 
     function getRecentJobs() {
@@ -19,11 +19,11 @@ function RecentBox() {
     return (
  
         
-            <ul>
+            <div>
                 {recentJobs.map(function(job) {
                     return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} salary={job.salary} />
                 })}
-            </ul>
+            </div>
         
     
 
