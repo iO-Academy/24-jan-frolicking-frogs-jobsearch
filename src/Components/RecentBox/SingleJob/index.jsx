@@ -1,14 +1,15 @@
-function SingleJob({logo, JobTitle, company, salary}) {
+function SingleJob({logo, JobTitle, company, type, salary}) {
 
     return (
 
-        <div>
-            <ul>
+        <div class="flex">
+            <div class="flex flex-row">
                 <img src={logo} alt="logo of company"/>
                 <li>{JobTitle}</li>
                 <li>{company}</li>
+                <li>{type}</li>
                 <li>{salary}</li>
-            </ul>
+                </div>
         </div>
 
     )
