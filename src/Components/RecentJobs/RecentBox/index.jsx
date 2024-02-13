@@ -27,7 +27,7 @@ function RecentBox() {
                     <th>Skills</th>
                 </tr>
                 {recentJobs.map(function(job) {
-                    return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} />
+                    return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} />
                 })}
             </table>
 
