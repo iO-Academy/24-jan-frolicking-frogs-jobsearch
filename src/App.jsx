@@ -19,6 +19,7 @@ function App() {
           {/* <AllJobs /> */}
           {/* <RecentJobs /> */}
           <Route path="/JobListing/:id" element={<JobListing />} />
+          <Route path='/' element={<RecentJobs />} />
           {/* <Route path="/joblisting" element={<JobListing />} /> */}
 
         </Routes>

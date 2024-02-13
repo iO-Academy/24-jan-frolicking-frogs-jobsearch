@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom"
 
 function JobListing() {
 
-    // const {id} = useParams()
+    const {id} = useParams()
+
 
     const [jobInfo, setJobInfo] = useState([])
 
@@ -21,15 +22,14 @@ function JobListing() {
 
     return (
         <>
-            {jobInfo.map(function(job) {
+            {/* {jobInfo.map(function(job) {
                 return (
-                    <div key={job.id}>
-						Click on the id to see the details :
-						<NavLink to={"/JobListing/" + job.id}> {job.id}</NavLink>
-					</div>
+
                     
                 )
-            })}
+            })} */}
+            {id}
+            
         </>
     )
 }
