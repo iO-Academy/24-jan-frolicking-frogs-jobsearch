@@ -1,4 +1,3 @@
-
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
 import RecentJobs from './Components/RecentJobs'
