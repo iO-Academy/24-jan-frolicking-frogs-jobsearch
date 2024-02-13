@@ -5,7 +5,10 @@ function SingleJob({logo, JobTitle, company, type, salary}) {
         <tr>
             <td>
                 <div class='flex gap-x-2'>
-                    <img src={logo} alt-text="logo of company" class='h-20 w-20'/>
+                    <div class='object-cover h-20 w-20'>
+                        <img src={logo} alt-text="logo of company" />
+                    </div>
+                    
                     <div class='flex flex-col'>
                         <p>{JobTitle}</p>
                         <p>{company}</p>                       
