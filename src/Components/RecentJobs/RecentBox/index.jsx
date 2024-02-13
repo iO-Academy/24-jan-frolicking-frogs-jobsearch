@@ -19,8 +19,8 @@ function RecentBox() {
     return (
  
         
-            <table>
-                <tr>
+            <table class='border-separate'>
+                <tr class='text-left'>
                     <th>Job title/Company</th>
                     <th>Type</th>
                     <th>Salary</th>
