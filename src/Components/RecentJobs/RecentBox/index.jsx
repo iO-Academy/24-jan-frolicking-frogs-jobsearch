@@ -19,11 +19,17 @@ function RecentBox() {
     return (
  
         
-            <div>
+            <table>
+                <tr>
+                    <th>Job title/Company</th>
+                    <th>Type</th>
+                    <th>Salary</th>
+                    <th>Skills</th>
+                </tr>
                 {recentJobs.map(function(job) {
                     return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} />
                 })}
-            </div>
+            </table>
 
     )
     

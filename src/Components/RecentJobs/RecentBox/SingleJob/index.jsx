@@ -2,15 +2,17 @@ function SingleJob({logo, JobTitle, company, type, salary}) {
 
     return (
 
-        <div class="flex">
-            <div class="flex flex-row">
-                <img src={logo} alt="logo of company"/>
-                <li>{JobTitle}</li>
-                <li>{company}</li>
-                <li>{type}</li>
-                <li>{salary}</li>
-                </div>
-        </div>
+        <tr>
+                <td>
+                    <div class='flex'>
+                        <img src={logo} alt="logo of company"/>
+                        {JobTitle}                    
+                    </div>
+                </td>
+                <td>{company}</td>
+                <td>{type}</td>
+                <td>{salary}</td>
+        </tr>
 
     )
 }
