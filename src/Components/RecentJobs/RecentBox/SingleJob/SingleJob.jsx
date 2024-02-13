@@ -7,8 +7,10 @@ function SingleJob({logo, JobTitle, company, type, salary}) {
                 <img src={logo} alt="logo of company"/>
                 <li>{JobTitle}</li>
                 <li>{company}</li>
-                <li>{type}</li>
+                <button>{type}</button>
                 <li>{salary}</li>
+                
+
                 </div>
         </div>
 
