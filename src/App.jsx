@@ -1,15 +1,26 @@
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
 import RecentJobs from './Components/RecentJobs'
-import SingleJob from './Components/RecentJobs/RecentBox/SingleJob'
+import JobListing from './Components/JobListing/JobListing'
 
 function App() {
 
 
   return (
     <>
-      <AllJobs />
-      <RecentJobs />
+      <BrowserRouter>
+
+        <Link to='/joblisting'>Jobs</Link>
+
+        <Routes>
+          {/* <AllJobs /> */}
+          {/* <RecentJobs /> */}
+
+          <Route path="/joblisting" element={<JobListing />} />
+
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
