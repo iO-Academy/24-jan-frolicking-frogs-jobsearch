@@ -1,19 +1,7 @@
 import { useEffect, useState } from "react"
+import Skill from "./Skill/Skill"
 
 function SingleJob({logo, JobTitle, company, type, salary, skills}) {
-
-    const [skillsButton, setSkillsButton] = useState([])
-    useEffect(getSkillsButton, [])
-
-    function getSkillsButton() {
-        fetch (skills)
-        .then(function (response) {
-            return response.json() 
-        }).then(function (data) {
-            console.log(data.skills)
-            setSkillsButton(data.skills)
-        })
-    }
 
     return (
 
@@ -24,6 +12,11 @@ function SingleJob({logo, JobTitle, company, type, salary, skills}) {
                 <li>{company}</li>
                 <button className="bg-green-200">{type}</button>
                 <li>{salary}</li>
+
+                {skills.map(function(skill) {
+                    return <Skill skill={skill} />
+                })}
+
                 </div>
         </div>
 

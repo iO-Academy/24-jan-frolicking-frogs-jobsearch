@@ -1,6 +1,7 @@
 import RecentBox from "./RecentBox"
 
 function RecentJobs() {
+    
 
     return (
         <div class='bg-white'>
