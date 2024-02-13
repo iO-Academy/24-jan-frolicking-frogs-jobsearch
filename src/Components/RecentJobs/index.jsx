@@ -1,0 +1,19 @@
+import RecentBox from "./RecentBox"
+
+function RecentJobs() {
+
+    return (
+        <>
+            <h3>Most Recent jobs</h3>
+            <a href="#">View all jobs</a>
+            <RecentBox />
+
+            
+        
+        </>
+
+    )
+
+}
+
+export default RecentJobs
