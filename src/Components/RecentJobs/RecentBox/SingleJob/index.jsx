@@ -13,11 +13,12 @@ function SingleJob({logo, JobTitle, company, type, salary, skills}) {
                 <button className="bg-green-200">{type}</button>
                 <li>{salary}</li>
 
+                
                 {skills.map(function(skill) {
                     return <Skill skill={skill} />
                 })}
 
-                </div>
+            </div>
         </div>
 
 
