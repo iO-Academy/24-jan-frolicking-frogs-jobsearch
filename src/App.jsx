@@ -1,8 +1,8 @@
 
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
-import RecentBox from './Components/RecentBox'
-import SingleJob from './Components/RecentBox/SingleJob'
+import RecentJobs from './Components/RecentJobs'
+import SingleJob from './Components/RecentJobs/RecentBox/SingleJob'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <AllJobs />
-      <RecentBox />
+      <RecentJobs />
       <SingleJob />
     </>
   )
