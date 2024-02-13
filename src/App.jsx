@@ -1,18 +1,17 @@
 
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
-import RecentJobs from './Components/RecentJobs'
+import RecentBox from './Components/RecentBox'
+import SingleJob from './Components/RecentBox/SingleJob'
 
 function App() {
 
 
   return (
     <>
-    
       <AllJobs />
-
-      <RecentJobs />
-
+      <RecentBox />
+      <SingleJob />
     </>
   )
 }
