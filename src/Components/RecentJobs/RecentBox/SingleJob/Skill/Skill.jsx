@@ -5,7 +5,7 @@ function Skill({skill}) {
 
 return (
 
-    <button>{skill.skill}</button>
+    <button class="rounded bg-cyan-500 text-white m-1">{skill.skill}</button>
 
 )
 

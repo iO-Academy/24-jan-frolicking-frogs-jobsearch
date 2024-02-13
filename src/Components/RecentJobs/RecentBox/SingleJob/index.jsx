@@ -4,12 +4,10 @@ import Skill from "./Skill/Skill"
 function SingleJob({logo, JobTitle, company, type, salary, skills}) {
 
     return (
-        <tr>
+        <tr class='odd:bg-gray-500 even:bg-gray-700'>
             <td>
                 <div class='flex gap-x-2'>
-                    <div class='object-cover h-20 w-20'>
-                        <img src={logo} alt-text="logo of company" />
-                    </div>
+                    <img src={logo} class='object-contain p-1.5 h-30 w-20' alt-text="logo of company" />
                     
                     <div class='flex flex-col'>
                         <p>{JobTitle}</p>
@@ -17,9 +15,9 @@ function SingleJob({logo, JobTitle, company, type, salary, skills}) {
                     </div>
                 </div>
             </td>
-            <td><button className="bg-green-200">{type}</button></td>
-            <td>{salary}</td>
-            <td>                
+            <td class='flex'><button class="rounded bg-sky-600 text-white">{type}</button></td>
+            <td class='pb-20'>{salary}</td>
+            <td class='flex'>                
                 {skills.map(function(skill) {
                     return <Skill skill={skill} />
                 })}
