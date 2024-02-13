@@ -21,7 +21,15 @@ function JobListing() {
 
     return (
         <>
-            <p> id: {jobInfo}</p>
+            {jobInfo.map(function(job) {
+                return (
+                    <div key={job.id}>
+						Click on the id to see the details :
+						<NavLink to={"/JobListing/" + job.id}> {job.id}</NavLink>
+					</div>
+                    
+                )
+            })}
         </>
     )
 }

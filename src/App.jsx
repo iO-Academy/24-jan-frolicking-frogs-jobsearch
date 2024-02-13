@@ -9,15 +9,17 @@ function App() {
 
   return (
     <>
+    
       <BrowserRouter>
 
-        <Link to='/joblisting'>Jobs</Link>
+      
+        {/* <Link to='/joblisting'>Jobs</Link> */}
 
         <Routes>
           {/* <AllJobs /> */}
           {/* <RecentJobs /> */}
-
-          <Route path="/joblisting" element={<JobListing />} />
+          <Route path="/JobListing/:id" element={<JobListing />} />
+          {/* <Route path="/joblisting" element={<JobListing />} /> */}
 
         </Routes>
       </BrowserRouter>
