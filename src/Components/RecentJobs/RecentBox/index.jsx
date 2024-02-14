@@ -19,8 +19,8 @@ function RecentBox() {
 
         <table className='border-separate-collapse table-auto text-white'>
             <thead>
-                    <tr className='text-left bg-gray-700'>
-                    <th>Job title / Company</th>
+                <tr className='text-left bg-gray-700'>
+                    <th className='pl-5'>Job title / Company</th>
                     <th>Type</th>
                     <th>Salary</th>
                     <th>Skills</th>
