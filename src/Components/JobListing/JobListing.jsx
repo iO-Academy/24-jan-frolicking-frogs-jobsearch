@@ -33,13 +33,12 @@ function JobListing() {
     }
 
     return (
-        <>
-            <div>
+        <div className="flex flex-col">
+            <div className="bg-blue-500 text-white flex flex-row gap-1">
                 {jobTitle}
                 {jobType}
             </div>
             <div>
-                {id}
                 <img src={jobLogo} alt="" />
                 {jobCompany}
             </div>
@@ -62,7 +61,7 @@ function JobListing() {
                 <button>Apply Now</button>
                 <button>Save for later</button>
             </div>
-        </>
+        </div>
     )
 }
 
