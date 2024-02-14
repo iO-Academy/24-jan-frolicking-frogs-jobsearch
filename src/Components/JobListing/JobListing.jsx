@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import SimilarJobs from "./SimilarJobs/SimilarJobs"
+import JobSkills from "./SimilarJobs/JobSkills/JobSkills"
 
 function JobListing() {
 
@@ -12,7 +14,7 @@ function JobListing() {
     const [jobDesc, setJobDesc] = useState('')
     const [jobSalary, setJobSalary] = useState('')
     const [jobDatePosted, setDatePosted] = useState('')
-    
+    const [jobSkills, setJobSkills] = useState([])
 
     useEffect(getJobInfo, [])
 
@@ -21,7 +23,7 @@ function JobListing() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
+            // console.log(data)
             setJobCompany(data.company)
             setJobTitle(data.job_title)
             setJobType(data.type)
@@ -29,6 +31,7 @@ function JobListing() {
             setJobDesc(data.job_description)
             setJobSalary(data.salary)
             setDatePosted(data.posted)
+            setJobSkills(data.skills)
         })
     }
 
@@ -54,6 +57,12 @@ function JobListing() {
                 </div>
             </div>
             <div>
+                <h3>Skills:</h3>
+                {jobSkills.map(function(skill) {
+                    return <JobSkills key={skill.id} skill={skill}/>
+                })}
+                </div>
+            <div>
                 <h3>Job Description:</h3>
                 {jobDesc}
             </div>
@@ -61,7 +70,15 @@ function JobListing() {
                 <button>Apply Now</button>
                 <button>Save for later</button>
             </div>
+<<<<<<< HEAD
         </div>
+=======
+
+            <div>
+                <SimilarJobs />
+            </div>
+        </>
+>>>>>>> 1b16302260458d896b9f6dfe6c05afbbe97f2fff
     )
 }
 
