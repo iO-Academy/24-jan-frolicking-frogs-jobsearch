@@ -8,9 +8,6 @@ function SimilarJobs() {
 
     const [similarInfo, setSimilarInfo] = useState([])
 
-    
-
-
 
     useEffect(getSimilarInfo, [])
 
@@ -19,20 +16,21 @@ function SimilarJobs() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
             setSimilarInfo(data)
         })
     }
 
     return (
-        <>
-            <h1>Similar Jobs</h1>
-            {similarInfo.map(function(info) {
+        <div className="bg-white ml-7 mr-7 mb-10 pl-10 pt-5">
+            <h1 className="text-3xl">Similar Jobs</h1>
+        
+            <div className="flex flex-row">
+                {similarInfo.map(function(info) {
                     return <SimilarInfo key={info.id} title={info.job_title} logo={info.logo} company={info.company} />
-                })}
+                    })}
 
-
-        </>
+            </div>
+        </div>
     )
 }
 
