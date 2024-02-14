@@ -21,7 +21,7 @@ function SimilarJobs() {
     }
 
     return (
-        <div className="bg-white ml-7 mr-7 mb-10 pl-10 pt-5">
+        <div className="bg-white ml-7 mr-7 pl-10 pt-5">
             <h1 className="text-3xl">Similar Jobs</h1>
         
             <div className="flex flex-row flex-wrap">
