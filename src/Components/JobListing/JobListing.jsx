@@ -23,7 +23,7 @@ function JobListing() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            // console.log(data)
+            console.log(data)
             setJobCompany(data.company)
             setJobTitle(data.job_title)
             setJobType(data.type)
@@ -36,49 +36,50 @@ function JobListing() {
     }
 
     return (
-        <div className="flex flex-col">
-            <div className="bg-blue-500 text-white flex flex-row gap-1">
-                {jobTitle}
-                {jobType}
-            </div>
-            <div>
-                <img src={jobLogo} alt="" />
-                {jobCompany}
-            </div>
-            <div>
-                <div>
-                    £{jobSalary}
-                </div>
-                <div>
+        <div>
+            <div className="flex flex-col">
+                <div className="bg-blue-500 text-white flex flex-row">
+                    {jobTitle}
                     {jobType}
                 </div>
                 <div>
-                    {jobDatePosted}
+                    <img src={jobLogo} alt="" />
+                    {jobCompany}
                 </div>
-            </div>
-            <div>
-                <h3>Skills:</h3>
-                {jobSkills.map(function(skill) {
-                    return <JobSkills key={skill.id} skill={skill}/>
-                })}
+                <div>
+                    <div>
+                        £{jobSalary}
+                    </div>
+                    <div>
+                        {jobType}
+                    </div>
+                    <div>
+                        {jobDatePosted}
+                    </div>
                 </div>
-            <div>
-                <h3>Job Description:</h3>
-                {jobDesc}
+                <div>
+                    <h3>Skills:</h3>
+                    {jobSkills.map(function(skill) {
+                        return <JobSkills key={skill.id} skill={skill}/>
+                    })}
+                </div>
+                <div>
+                    <h3>Job Description:</h3>
+                    {jobDesc}
+                </div>
+                <div>
+                    <button>Apply Now</button>
+                    <button>Save for later</button>
+                </div>
+
             </div>
-            <div>
-                <button>Apply Now</button>
-                <button>Save for later</button>
-            </div>
-<<<<<<< HEAD
-        </div>
-=======
 
             <div>
-                <SimilarJobs />
+                <div>
+                    <SimilarJobs />
+                </div>
             </div>
-        </>
->>>>>>> 1b16302260458d896b9f6dfe6c05afbbe97f2fff
+        </div>
     )
 }
 
