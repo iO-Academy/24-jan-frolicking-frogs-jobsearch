@@ -9,7 +9,7 @@ function SingleJob({logo, JobTitle, company, type, salary, skills}) {
                 <div class='flex gap-x-2'>
                     <img src={logo} class='object-contain p-1.5 h-30 w-20 w-16 hidden md:flex' alt-text="logo of company" />
                     
-                    <div class='flex flex-col'>
+                    <div class='flex flex-col pl-5 md:pl-0'>
                         <p>{JobTitle}</p>
                         <p>{company}</p>                       
                     </div>
