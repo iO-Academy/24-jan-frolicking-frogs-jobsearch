@@ -11,30 +11,27 @@ function RecentBox() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
             setRecentJobs(data)
         })
     }
 
     return (
- 
-        
-            <table class='border-separate-collapse table-auto text-white'>
-                <thead>
-                     <tr class='text-left bg-gray-700'>
-                        <th>Job title / Company</th>
-                        <th>Type</th>
-                        <th>Salary</th>
-                        <th>Skills</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {recentJobs.map(function(job) {
-                    return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} />
-                    })}
-                </tbody>
-                
-            </table>
+
+        <table className='border-separate-collapse table-auto text-white'>
+            <thead>
+                    <tr className='text-left bg-gray-700'>
+                    <th>Job title / Company</th>
+                    <th>Type</th>
+                    <th>Salary</th>
+                    <th>Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                {recentJobs.map(function(job) {
+                return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} />
+                })}
+            </tbody>
+        </table>
 
     )
     
