@@ -1,7 +1,7 @@
-function JobSkills ({skills}) {
+function JobSkills ({skill}) {
     return (
         <>
-        <button className="bg-green-200">{skills.skill}</button>
+        <button className="bg-green-200">{skill.skill}</button>
 
 
         </>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import SimilarJobs from "./SimilarJobs/SimilarJobs"
+import JobSkills from "./SimilarJobs/JobSkills/JobSkills"
 
 function JobListing() {
 
@@ -13,7 +14,7 @@ function JobListing() {
     const [jobDesc, setJobDesc] = useState('')
     const [jobSalary, setJobSalary] = useState('')
     const [jobDatePosted, setDatePosted] = useState('')
-    const [JobSkills, setJobSkills] = useState('')
+    const [jobSkills, setJobSkills] = useState([])
 
     useEffect(getJobInfo, [])
 
@@ -58,9 +59,8 @@ function JobListing() {
             </div>
             <div>
                 <h3>Skills:</h3>
-                {JobSkills.map(function(skill) {
-                    return 
-                    <JobSkills skill={skills}/>
+                {jobSkills.map(function(skill) {
+                    return <JobSkills key={skill.id} skill={skill}/>
                 })}
                 </div>
             <div>
