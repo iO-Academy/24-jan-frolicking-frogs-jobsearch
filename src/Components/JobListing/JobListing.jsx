@@ -38,7 +38,7 @@ function JobListing() {
     return (
         <div>
             <div className="flex flex-col">
-                <div className="bg-blue-500 text-white flex flex-row">
+                <div className="bg-blue-500 text-white flex flex-row h-20 m-0 place-items-center">
                     {jobTitle}
                     {jobType}
                 </div>
