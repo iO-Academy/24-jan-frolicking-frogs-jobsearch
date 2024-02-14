@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import SimilarJobs from "./SimilarJobs/SimilarJobs"
 
 function JobListing() {
 
@@ -21,7 +22,7 @@ function JobListing() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
+            // console.log(data)
             setJobCompany(data.company)
             setJobTitle(data.job_title)
             setJobType(data.type)
@@ -61,6 +62,10 @@ function JobListing() {
             <div>
                 <button>Apply Now</button>
                 <button>Save for later</button>
+            </div>
+
+            <div>
+                <SimilarJobs />
             </div>
         </>
     )
