@@ -1,22 +1,20 @@
-import RecentBox from "./RecentBox"
+import RecentJobsTable from "./RecentJobsTable"
 
 function RecentJobs() {
     
 
     return (
-        <div class='bg-white flex flex-col px-20'>
-            <div class='flex flex-row justify-between py-10'>
-                <h3 class='text-4xl'>Most recent jobs</h3>
-                <a href="#" class='text-sky-600 self-center'>View all jobs →</a> 
+        <div className='bg-white flex justify-center px-10 md:px-30 sm:px-30'>
+            <div className='flex flex-col justify-between py-10'>
+                <div className='flex flex-row py-5 justify-between items-baseline'>
+                    <h3 className='text-4xl'>Most recent jobs</h3>
+                    <a href="#" className='text-sky-600'>View all jobs →</a> 
+                </div>
+            <RecentJobsTable />
             </div>
-            <RecentBox />
-
-            
-        
         </div>
 
     )
-
 }
 
 export default RecentJobs
