@@ -36,7 +36,7 @@ function JobListing() {
     }
 
     return (
-        <div className="bg-slate-100">
+        <div className="bg-slate-100 m-0">
             <div className="flex flex-col">
                 <div className="bg-blue-500 text-white flex flex-row h-32 m-0 place-items-center pl-10 text-2xl">
                     {jobTitle}
@@ -77,8 +77,8 @@ function JobListing() {
                     </div>
                 </div>
 
-                    <div className="m-10">
-                        <h3 className="pb-4 text-2xl whitespace-break-spaces">Job Description:</h3>
+                    <div className="m-10 whitespace-pre-wrap">
+                        <h3 className="pb-4 text-2xl">Job Description:</h3>
                             {jobDesc}
                     </div>
 
@@ -97,7 +97,7 @@ function JobListing() {
 
             </div>
 
-            <footer>Copyright</footer>
+            <div>Footer</div>
 
         </div>
     )
