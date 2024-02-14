@@ -21,9 +21,9 @@ function RecentJobsTable() {
             <thead>
                 <tr className='text-left bg-gray-700'>
                     <th className='pl-5'>Job title / Company</th>
-                    <th>Type</th>
-                    <th>Salary</th>
-                    <th>Skills</th>
+                    <th className='px-5'>Type</th>
+                    <th className='px-5'>Salary</th>
+                    <th className='px-5'>Skills</th>
                 </tr>
             </thead>
             <tbody>
