@@ -36,42 +36,55 @@ function JobListing() {
     }
 
     return (
-        <div>
+        <div className="bg-slate-100">
             <div className="flex flex-col">
-                <div className="bg-blue-500 text-white flex flex-row h-20 m-0 place-items-center">
+                <div className="bg-blue-500 text-white flex flex-row h-32 m-0 place-items-center pl-10 text-2xl">
                     {jobTitle}
-                    {jobType}
+                    <span className="bg-green-600 m-4 px-2 rounded-xl">{jobType}</span>
                 </div>
-                <div>
-                    <img src={jobLogo} alt="" />
+
+                <div className="bg-white m-7">
+                    
+                    <div className="flex flex-row place-items-center font-bold text-xl ">
+                    <img src={jobLogo} alt="" className="w-40 m-10"/>
                     {jobCompany}
                 </div>
-                <div>
+
+                <div className="ml-10 font-semibold">Key Facts:</div>
+
+                <div className="flex flex-row gap-10 ml-10 mb-10">
+                    
                     <div>
+                        <h3 className="font-semibold">Salary:</h3>
                         £{jobSalary}
                     </div>
                     <div>
+                        <h3 className="font-semibold">Type:</h3>
                         {jobType}
                     </div>
                     <div>
+                        <h3 className="font-semibold">Date Posted:</h3>
                         {jobDatePosted}
                     </div>
-                </div>
-                <div>
-                    <h3>Skills:</h3>
+                
+                     <div>
+                    <h3 className="font-semibold">Skills:</h3>
                     {jobSkills.map(function(skill) {
                         return <JobSkills key={skill.id} skill={skill}/>
                     })}
-                </div>
-                <div>
-                    <h3>Job Description:</h3>
-                    {jobDesc}
-                </div>
-                <div>
-                    <button>Apply Now</button>
-                    <button>Save for later</button>
+                    </div>
                 </div>
 
+                <div className="m-10">
+                    <h3 className="pb-4 text-2xl">Job Description:</h3>
+                    {jobDesc}
+                </div>
+                <div className="m-10 flex justify-between">
+                    <button className="bg-green-600 p-2 rounded text-white">Apply Now</button>
+                    <button className="bg-slate-100 text-slate-600 p-2 rounded border-2 border-slate-300">Save for later</button>
+                </div>
+
+            </div>
             </div>
 
             <div>
