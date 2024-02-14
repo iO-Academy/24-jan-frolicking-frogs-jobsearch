@@ -8,6 +8,8 @@ function SimilarJobs() {
 
     const [similarInfo, setSimilarInfo] = useState([])
 
+    
+
 
 
     useEffect(getSimilarInfo, [])

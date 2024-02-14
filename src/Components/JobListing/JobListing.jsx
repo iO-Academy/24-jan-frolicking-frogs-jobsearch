@@ -13,7 +13,7 @@ function JobListing() {
     const [jobDesc, setJobDesc] = useState('')
     const [jobSalary, setJobSalary] = useState('')
     const [jobDatePosted, setDatePosted] = useState('')
-    
+    const [JobSkills, setJobSkills] = useState('')
 
     useEffect(getJobInfo, [])
 
@@ -30,6 +30,7 @@ function JobListing() {
             setJobDesc(data.job_description)
             setJobSalary(data.salary)
             setDatePosted(data.posted)
+            setJobSkills(data.skills)
         })
     }
 
@@ -55,6 +56,13 @@ function JobListing() {
                     {jobDatePosted}
                 </div>
             </div>
+            <div>
+                <h3>Skills:</h3>
+                {JobSkills.map(function(skill) {
+                    return 
+                    <JobSkills skill={skills}/>
+                })}
+                </div>
             <div>
                 <h3>Job Description:</h3>
                 {jobDesc}
