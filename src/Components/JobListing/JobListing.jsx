@@ -78,7 +78,7 @@ function JobListing() {
                 </div>
 
                     <div className="m-10">
-                        <h3 className="pb-4 text-2xl">Job Description:</h3>
+                        <h3 className="pb-4 text-2xl whitespace-break-spaces">Job Description:</h3>
                             {jobDesc}
                     </div>
 
@@ -94,7 +94,7 @@ function JobListing() {
                     <div>
                     <SimilarJobs />
                 </div>
-                
+
             </div>
 
             <footer>Copyright</footer>
