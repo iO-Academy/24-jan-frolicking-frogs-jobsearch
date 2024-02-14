@@ -1,6 +1,6 @@
 import Skill from "./Skill/Skill"
 
-function SingleJob({logo, JobTitle, company, type, salary, skills}) {
+function SingleJob({logo, jobTitle, company, type, salary, skills}) {
 
     return (
         <tr className='odd:bg-gray-500 even:bg-gray-700'>
@@ -9,7 +9,7 @@ function SingleJob({logo, JobTitle, company, type, salary, skills}) {
                     <img src={logo} className='object-contain p-1.5 h-30 w-20 w-16 hidden md:flex' alt-text="logo of company" />
                     
                     <div className='flex flex-col pl-5 md:pl-0'>
-                        <p>{JobTitle}</p>
+                        <p>{jobTitle}</p>
                         <p>{company}</p>                       
                     </div>
                 </div>

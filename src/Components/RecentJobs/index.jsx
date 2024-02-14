@@ -1,4 +1,4 @@
-import RecentBox from "./RecentBox"
+import RecentJobsTable from "./RecentBox"
 
 function RecentJobs() {
     
@@ -9,7 +9,7 @@ function RecentJobs() {
                 <h3 className='text-4xl'>Most recent jobs</h3>
                 <a href="#" className='text-sky-600 self-center'>View all jobs →</a> 
             </div>
-            <RecentBox />
+            <RecentJobsTable />
         </div>
 
     )
