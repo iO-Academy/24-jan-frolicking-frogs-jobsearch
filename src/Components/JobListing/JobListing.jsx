@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import SimilarJobs from "./SimilarJobs/SimilarJobs"
-import JobSkills from "./SimilarJobs/JobSkills/JobSkills"
+import JobSkill from "./SimilarJobs/JobSkills/JobSkills"
 
 function JobListing() {
 
@@ -23,7 +23,6 @@ function JobListing() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
             setJobCompany(data.company)
             setJobTitle(data.job_title)
             setJobType(data.type)
@@ -72,7 +71,7 @@ function JobListing() {
                      <div>
                         <h3 className="font-semibold">Skills:</h3>
                             {jobSkills.map(function(skill) {
-                                return <JobSkills key={skill.id} skill={skill}/>
+                                return <JobSkill key={skill.id} skill={skill}/>
                             })}
                     </div>
                 </div>

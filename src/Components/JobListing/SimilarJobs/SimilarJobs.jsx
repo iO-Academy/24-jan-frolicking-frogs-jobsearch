@@ -25,7 +25,7 @@ function SimilarJobs() {
             <div className="flex flex-row flex-wrap">
                 {similarInfo.map(function(info) {
                     return <SimilarInfo key={info.id} title={info.job_title} logo={info.logo} company={info.company} />
-                    })}
+                })}
             </div>
         </div>
     )
