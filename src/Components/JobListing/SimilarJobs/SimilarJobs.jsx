@@ -5,9 +5,7 @@ import SimilarInfo from "./SimilarInfo/SimilarInfo"
 function SimilarJobs() {
 
     const {id} = useParams()
-
     const [similarInfo, setSimilarInfo] = useState([])
-
 
     useEffect(getSimilarInfo, [])
 
@@ -28,7 +26,6 @@ function SimilarJobs() {
                 {similarInfo.map(function(info) {
                     return <SimilarInfo key={info.id} title={info.job_title} logo={info.logo} company={info.company} />
                     })}
-
             </div>
         </div>
     )

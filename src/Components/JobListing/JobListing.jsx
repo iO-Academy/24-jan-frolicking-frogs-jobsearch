@@ -45,8 +45,8 @@ function JobListing() {
 
                 <div className="bg-white m-7">
                     
-                    <div className="flex flex-row place-items-center font-bold text-xl ">
-                        <img src={jobLogo} alt="" className="w-40 m-10"/>
+                    <div className="flex flex-row place-items-center font-bold text-xl">
+                        <img src={jobLogo} alt="logo of job advertised" className="w-40 m-10"/>
                     {jobCompany}
                     </div>
 
@@ -56,7 +56,7 @@ function JobListing() {
                     
                     <div>
                         <h3 className="font-semibold">Salary:</h3>
-                        £{jobSalary}
+                        {jobSalary}
                     </div>
 
                     <div>
@@ -93,9 +93,8 @@ function JobListing() {
                 <div>
                     <div>
                     <SimilarJobs />
+                    </div>
                 </div>
-
-            </div>
 
         </div>
     )
