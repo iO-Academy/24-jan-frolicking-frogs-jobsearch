@@ -4,6 +4,7 @@ import Skill from "./Skill/Skill"
 function SingleJob({logo, jobTitle, company, type, salary, skills, id}) {
 
     return (
+        
         <tr className='odd:bg-gray-500 even:bg-gray-700'>
             <td>
                 <Link to={"/JobListing/" + id}>
