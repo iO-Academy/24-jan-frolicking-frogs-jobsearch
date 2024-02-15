@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import SingleJobSearch from "./SingleJobSearch/SIngleJobSearch"
 
-function JobSearchResults({input}) {
+function JobSearchResults({}) {
 
         const [allJobsInfo, setAllJobsInfo] = useState([])
         useEffect(getAllJobsInfo, [])
