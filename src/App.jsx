@@ -1,17 +1,16 @@
 import './App.css'
 import AllJobs from './Components/AllJobs/AllJobs'
-import RecentJobs from './Components/RecentJobs'
-import SingleJob from './Components/RecentJobs/RecentBox/SingleJob'
-import SearchSection from './Components/SearchSection/SearchSection'
+import SearchMenu from './Components/Search'
+import RecentJobs from './Components/Search/RecentJobs'
+import SingleJob from './Components/Search/RecentJobs/RecentBox/SingleJob'
+import SearchSection from './Components/Search/SearchSection/SearchSection'
 
 function App() {
 
 
   return (
     <>
-      <SearchSection />
-      {/* <AllJobs /> */}
-      <RecentJobs />
+      <SearchMenu />
     </>
   )
 }

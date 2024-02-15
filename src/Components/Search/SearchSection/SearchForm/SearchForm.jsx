@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom"
 import JobSearchResults from "./JobSearchResults/JobSearchResults"
 
 function SearchForm() {
     const [input, setInput] = useState('')
+
+    const route = useNavigate()
+    const handleRoute = () => {
+        route('/results')
+    }
 
     return (
 
@@ -35,12 +40,7 @@ function SearchForm() {
 
                 </form>
                 <div>
-                    <BrowserRouter>
-                        <Link to='/results'><button>Search</button></Link>
-                        <Routes>
-                            <Route path='/results' element={<JobSearchResults />} />
-                        </Routes>
-                    </BrowserRouter> 
+                    <button onClick={handleRoute}>Search</button>
                 </div>
             </div>
         </>
