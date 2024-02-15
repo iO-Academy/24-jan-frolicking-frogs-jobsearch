@@ -1,34 +1,30 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import SingleJobSearch from "./SingleJobSearch/SIngleJobSearch"
 import SearchSection from "../../SearchSection"
+import { useNavigate } from "react-router-dom"
+import CurrentUserContext from "../../../../../CurrentUserContext"
+import SearchForm from "../SearchForm"
 
-function JobSearchResults({}) {
+function JobSearchResults() {
 
-        const [allJobsInfo, setAllJobsInfo] = useState([])
-        useEffect(getAllJobsInfo, [])
-    
-        function getAllJobsInfo() {
-            fetch (`https://job-search-api.dev.io-academy.uk/jobs`)
-            .then(function (response) {
-                return response.json() 
-            }).then(function (data) {
-                console.log(data)
-                setAllJobsInfo(data)
-            })
-        }
+
+    const {searchInfo} = useContext(CurrentUserContext)
+
 
     return (
 
         <>
-            <SearchSection />
-            <h1>Search results</h1>
-            {allJobsInfo.map(function(job) {
-                return <SingleJobSearch key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} />
+            
+            <div>
+                {searchInfo.map(function(job) {
+                    return <SingleJobSearch key={job.id} jobTitle={job.job_title} company={job.company} salary={job.salary} type={job.type} logo={job.logo} />
                 })}
+            </div>
         </>
-
-    )
-
+     )
 }
+ 
 
 export default JobSearchResults
+
+ 

@@ -6,7 +6,7 @@ function RecentJobs() {
 
     return (
         <div>
-            <SearchSection />
+
             <div className='bg-white flex justify-center px-10 md:px-30 sm:px-30'>
                 <div className='flex flex-col justify-between py-10'>
                     <div className='flex flex-row py-5 justify-between items-baseline'>
