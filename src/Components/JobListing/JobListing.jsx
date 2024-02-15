@@ -83,7 +83,7 @@ function JobListing() {
 
                     <div className="m-10 flex justify-between">
                         <button className="bg-green-600 p-2 rounded text-white">Apply Now</button>
-                        <button className="bg-slate-100 text-slate-600 p-2 rounded border-2 border-slate-300">Save for later</button>
+                       {/* <button className="bg-slate-100 text-slate-600 p-2 rounded border-2 border-slate-300">Save for later</button>} */}
                     </div>
 
                 </div>
