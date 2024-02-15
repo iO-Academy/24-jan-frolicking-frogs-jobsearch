@@ -19,8 +19,8 @@ function SearchMenu() {
                         <NavLink to="/">Job Search</NavLink>
 
                         <div className='text-slate-500 flex gap-3'>
-                            <NavLink className='nav-link' to="/">All Jobs</NavLink>
-                            <NavLink className='nav-link' to="/">Full Time</NavLink>
+                            <NavLink className='nav-link' to="/all-jobs">All Jobs</NavLink>
+                            <NavLink className='nav-link' to="/full-time">Full Time</NavLink>
                             <NavLink className='nav-link' to="/">Part Time</NavLink>
                             <NavLink className='nav-link' to="/">Contract</NavLink>
                         </div>
@@ -36,7 +36,8 @@ function SearchMenu() {
                     <Routes>
                         <Route path="/JobListing/:id" element={<JobListing />}/>
                         <Route path='/results' element={<JobSearchResults />} />
-                        <Route path='/' element={<RecentJobs />} />        
+                        <Route path='/' element={<RecentJobs />} /> 
+                        <Route path='all-jobs' element={} />       
                     </Routes>
 
                 </BrowserRouter>
