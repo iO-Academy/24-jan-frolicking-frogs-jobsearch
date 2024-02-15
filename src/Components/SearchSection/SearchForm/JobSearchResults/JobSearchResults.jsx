@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import SingleJobSearch from "./SingleJobSearch/SIngleJobSearch"
 
-function JobSearchResults() {
+function JobSearchResults({input}) {
 
         const [allJobsInfo, setAllJobsInfo] = useState([])
         useEffect(getAllJobsInfo, [])
     
         function getAllJobsInfo() {
-            fetch ('https://job-search-api.dev.io-academy.uk/jobs')
+            fetch (`https://job-search-api.dev.io-academy.uk/jobs`)
             .then(function (response) {
                 return response.json() 
             }).then(function (data) {
