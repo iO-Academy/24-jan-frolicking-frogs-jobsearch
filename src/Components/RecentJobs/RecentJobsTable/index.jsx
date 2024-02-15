@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import SingleJob from "./SingleJob"
 
-function RecentBox() {
+function RecentJobsTable() {
     
     const [recentJobs, setRecentJobs] = useState([])
     useEffect(getRecentJobs, [])
@@ -21,15 +21,15 @@ function RecentBox() {
             <thead>
                 <tr className='text-left bg-gray-700'>
                     <th className='pl-5'>Job title / Company</th>
-                    <th>Type</th>
-                    <th>Salary</th>
-                    <th>Skills</th>
+                    <th className='px-5'>Type</th>
+                    <th className='px-5'>Salary</th>
+                    <th className='px-5'>Skills</th>
                 </tr>
             </thead>
             <tbody>
                 {recentJobs.map(function(job) {
-                return <SingleJob key={job.id} logo={job.logo} JobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} />
-                })}
+                    return <SingleJob key={job.id} logo={job.logo} jobTitle={job.job_title} company={job.company} type={job.type} salary={job.salary} skills={job.skills} id={job.id} />
+                    })}
             </tbody>
         </table>
 
@@ -37,4 +37,4 @@ function RecentBox() {
     
 }
 
-export default RecentBox
+export default RecentJobsTable
