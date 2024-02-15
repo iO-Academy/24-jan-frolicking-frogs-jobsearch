@@ -5,9 +5,9 @@ function SearchSection() {
 
     return (
         <>
-        <div className="bg-slate-500">
+        <div className="bg-slate-500 flex flex-col items-center">
             <img src="" alt="" />
-            <h1>Find your perfect job</h1>
+            
             <SearchForm />
         </div>
 

@@ -34,30 +34,35 @@ function SearchForm() {
 
     return (
 
-        <div> 
-
+        <div className="p-5">
+            
+                <h1 className="text-white text-2xl">Find your perfect job</h1>
                 <form onSubmit={clickHandler}>
-                <input type="text" 
+                <input className="w-[43rem]" type="text" 
                 placeholder="Search" 
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 />
                 
-                <div>
-                    <input type="checkbox" />
-                    <label htmlFor="">Full Time</label>
-                    <input type="checkbox" />
-                    <label htmlFor="">Part Time</label>
-                    <input type="checkbox" />
-                    <label htmlFor="">Contract</label>
+                <div className="flex justify-between">
+                    <div>
+                        <input type="checkbox" />
+                        <label htmlFor="">Full Time</label>
+                        <input type="checkbox" />
+                        <label htmlFor="">Part Time</label>
+                        <input type="checkbox" />
+                        <label htmlFor="">Contract</label>
+                    </div>
 
-                    <p>Popular skills:</p>
-                    <button>PHP</button>
-                    <button>React</button>
-                    <button>Laravel</button>
-                    <button>See more →</button>
+                    <div className="flex">
+                        <p>Popular skills:</p>
+                        <button>PHP</button>
+                        <button>React</button>
+                        <button>Laravel</button>
+                        <button>See more →</button>
+                    </div>
                 </div>
-                <input type="submit" value="Search"/>
+                <input className="bg-blue-500 p-2 rounded" type="submit" value="Search"/>
 
             </form>
 
