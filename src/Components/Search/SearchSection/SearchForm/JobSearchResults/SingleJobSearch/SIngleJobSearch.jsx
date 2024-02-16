@@ -1,9 +1,12 @@
-function SingleJobSearch({logo, jobTitle, company, type, salary}) {
+import { Link } from "react-router-dom"
+
+function SingleJobSearch({logo, jobTitle, company, type, salary, id}) {
 
     return (
                 
         <tr className='odd:bg-gray-500 even:bg-gray-700'>
             <td>
+            <Link to={"/JobListing/" + id} >
                 <div className='flex gap-x-2'>
                     <img src={logo} className='object-contain p-1.5 h-30 w-20 w-16 hidden md:flex' alt-text="logo of company" />
                     
@@ -12,6 +15,7 @@ function SingleJobSearch({logo, jobTitle, company, type, salary}) {
                         <p>{company}</p>                       
                     </div>
                 </div>
+            </Link >    
             </td>
             <td className="flex"><button className="rounded bg-sky-600 text-white">{type}</button></td>
             <td className="pb-20">{salary}</td>
