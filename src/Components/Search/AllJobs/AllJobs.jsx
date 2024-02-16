@@ -37,7 +37,7 @@ function AllJobs() {
                         </thead>
                         <tbody>
                             {allJobs.map(function(job) {
-                                return <FullTimeSingle key={job.id} jobTitle={job.job_title} company={job.company} salary={job.salary} type={job.type} logo={job.logo} />
+                                return <FullTimeSingle key={job.id} jobTitle={job.job_title} company={job.company} salary={job.salary} type={job.type} logo={job.logo} id={job.id}/>
                             })}
                         </tbody>
                     </table>
