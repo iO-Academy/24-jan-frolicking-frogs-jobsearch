@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom"
-import JobSearchResults from "./JobSearchResults/JobSearchResults"
+import { useNavigate } from "react-router-dom"
 import CurrentUserContext from "../../../../CurrentUserContext"
 
 function SearchForm() {
@@ -20,14 +19,12 @@ function SearchForm() {
         .then(function (response) {
             return response.json() 
         }).then(function (data) {
-            console.log(data)
             setSearchInfo(data)
         })
     }
 
     function clickHandler(e) {
         e.preventDefault()
-        console.log('clicked')
         getSearchInfo()
         handleRoute()
     }
@@ -41,8 +38,7 @@ function SearchForm() {
                 <input className= "w-[30rem] md:w-[43rem] rounded placeholder:pl-2" type="text" 
                 placeholder="job title / keyword / skill / company" 
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                />
+                onChange={(e) => setSearch(e.target.value)}/>
                 
                 <div className="flex justify-between gap-7 py-2 text-white">
                     <div className="space-x-1">
@@ -62,14 +58,9 @@ function SearchForm() {
                     </div>
                 </div>
                 <input className="bg-blue-500 p-2 rounded text-white" type="submit" value="Search"/>
-
             </form>
-
-
         </div>
-
     )
-
 }
 
 export default SearchForm

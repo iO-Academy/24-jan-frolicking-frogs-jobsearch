@@ -15,15 +15,9 @@ function SingleJobSearch({logo, jobTitle, company, type, salary}) {
             </td>
             <td className="flex"><button className="rounded bg-sky-600 text-white">{type}</button></td>
             <td className="pb-20">{salary}</td>
-            <td className="flex">                
-                {/* {skills.map(function(skill) {
-                    return <Skill skill={skill} />
-                })} */}
-            </td>
+            <td className="flex"></td>
         </tr>
-
     )
-
 }
 
 export default SingleJobSearch

@@ -44,10 +44,6 @@ function AllJobs() {
                 </div>
             </div>
         </div>
-
-
-
-
     )
 }
 

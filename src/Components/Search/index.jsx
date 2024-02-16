@@ -17,9 +17,10 @@ function SearchMenu() {
     return(
         <div>
             <CurrentUserContext.Provider value={ {searchInfo, setSearchInfo} }>
-
                 <BrowserRouter>
+
                     <nav className="flex flex-row bg-white justify-between place-items-center gap-5 text-black p-2">
+                        
                         <NavLink to="/">JobSearch</NavLink>
 
                         <div className='text-slate-500 flex gap-3'>

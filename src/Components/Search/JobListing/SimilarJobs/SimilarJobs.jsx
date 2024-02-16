@@ -21,7 +21,6 @@ function SimilarJobs() {
     return (
         <div className="bg-white ml-7 mr-7 pl-10 pt-5">
             <h1 className="text-3xl">Similar Jobs</h1>
-        
             <div className="flex flex-row flex-wrap">
                 {similarInfo.map(function(info) {
                     return <SimilarInfo key={info.id} title={info.job_title} logo={info.logo} company={info.company} />

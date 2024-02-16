@@ -15,12 +15,9 @@ function FullTimeSingle({logo, jobTitle, company, type, salary}) {
             </td>
             <td className='flex'><button className="rounded bg-sky-600 text-white">{type}</button></td>
             <td className='pb-20'>{salary}</td>
-            <td className='flex'>                
-            </td>
+            <td className='flex'></td>
         </tr> 
-
     )
-
 }
 
 export default FullTimeSingle

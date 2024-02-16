@@ -25,7 +25,6 @@ function SingleJob({logo, jobTitle, company, type, salary, skills, id}) {
                 })}
             </td>
         </tr>
-
     )
 }
 
