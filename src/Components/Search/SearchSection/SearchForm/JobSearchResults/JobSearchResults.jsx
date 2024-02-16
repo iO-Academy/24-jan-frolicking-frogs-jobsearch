@@ -13,7 +13,7 @@ function JobSearchResults() {
 
     return (
 
-            <div className='bg-white flex justify-center md:px-30 sm:px-30'>
+            <div className='bg-white flex justify-center mx-10 lg:m-0'>
                     <div className='flex flex-col justify-between py-10'>
                         <div className='flex flex-col py-5 justify-between items-baseline'>
                            
