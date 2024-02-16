@@ -36,16 +36,16 @@ function SearchForm() {
 
         <div className="p-5">
             
-                <h1 className="text-white text-2xl">Find your perfect job</h1>
+                <h1 className="text-white text-4xl pb-3">Find your perfect job</h1>
                 <form onSubmit={clickHandler}>
-                <input className="w-[43rem]" type="text" 
-                placeholder="Search" 
+                <input className= "w-[30rem] md:w-[43rem] rounded placeholder:pl-2" type="text" 
+                placeholder="job title / keyword / skill / company" 
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 />
                 
-                <div className="flex justify-between">
-                    <div>
+                <div className="flex justify-between gap-7 py-2 text-white">
+                    <div className="space-x-1">
                         <input type="checkbox" />
                         <label htmlFor="">Full Time</label>
                         <input type="checkbox" />
@@ -54,15 +54,14 @@ function SearchForm() {
                         <label htmlFor="">Contract</label>
                     </div>
 
-                    <div className="flex">
+                    <div className="flex space-x-2 text-white">
                         <p>Popular skills:</p>
-                        <button>PHP</button>
-                        <button>React</button>
-                        <button>Laravel</button>
-                        <button>See more →</button>
+                        <button className="bg-cyan-500 px-1 rounded font-bold">PHP</button>
+                        <button className="bg-cyan-500 px-1 rounded font-bold">React</button>
+                        <button className="bg-cyan-500 px-1 rounded font-bold">Laravel</button>
                     </div>
                 </div>
-                <input className="bg-blue-500 p-2 rounded" type="submit" value="Search"/>
+                <input className="bg-blue-500 p-2 rounded text-white" type="submit" value="Search"/>
 
             </form>
 
