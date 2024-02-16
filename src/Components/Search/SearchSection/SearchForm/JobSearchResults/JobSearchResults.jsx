@@ -30,7 +30,7 @@ function JobSearchResults() {
                     </thead>
                     <tbody>
                         {searchInfo.map(function(job) {
-                            return <SingleJobSearch key={job.id} jobTitle={job.job_title} company={job.company} salary={job.salary} type={job.type} logo={job.logo} id={job.id}/>
+                            return <SingleJobSearch key={job.id} jobTitle={job.job_title} company={job.company} salary={job.salary} type={job.type} logo={job.logo} id={job.id} skills={job.skills}/>
                         })}
                     </tbody>
                     </table>

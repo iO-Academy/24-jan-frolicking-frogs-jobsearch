@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import Skill from "../../../../RecentJobs/RecentJobsTable/SingleJob/Skill/Skill"
 
-function SingleJobSearch({logo, jobTitle, company, type, salary, id}) {
+function SingleJobSearch({logo, jobTitle, company, type, salary, id, skills}) {
 
     return (
                 
@@ -20,6 +21,11 @@ function SingleJobSearch({logo, jobTitle, company, type, salary, id}) {
             <td className="flex"><button className="rounded bg-sky-600 text-white">{type}</button></td>
             <td className="pb-20">{salary}</td>
             <td className="flex"></td>
+            <td className='flex'>                
+                {skills.map(function(skill) {
+                    return <Skill skill={skill} />
+                })}
+            </td>
         </tr>
     )
 }
