@@ -1,7 +1,7 @@
 function FullTimeSingle({logo, jobTitle, company, type, salary}) {
 
     return (
-        <>
+
         <tr className='odd:bg-gray-500 even:bg-gray-700'>
             <td>
                 <div className='flex gap-x-2'>
@@ -16,13 +16,8 @@ function FullTimeSingle({logo, jobTitle, company, type, salary}) {
             <td className='flex'><button className="rounded bg-sky-600 text-white">{type}</button></td>
             <td className='pb-20'>{salary}</td>
             <td className='flex'>                
-                {/* {skills.map(function(skill) {
-                    return <Skill skill={skill} />
-                })} */}
             </td>
-        </tr>
-        
-        </>
+        </tr> 
 
     )
 

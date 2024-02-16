@@ -29,8 +29,8 @@ function SearchMenu() {
                             <NavLink className='nav-link' to="/contract">Contract</NavLink>
                         </div>
 
-
                         <button type="button" disabled className='border-2 border-green-600 text-green-600 p-1 px-2 rounded font-bold'>Post a Job</button>
+                        
                     </nav>
 
                     <SearchSection />
