@@ -46,7 +46,7 @@ function JobListing() {
                     
                     <div className="flex flex-row place-items-center font-bold text-xl">
                         <img src={jobLogo} alt="logo of job advertised" className="w-40 m-10"/>
-                    {jobCompany}
+                        {jobCompany}
                     </div>
 
                     <div className="ml-10 font-semibold">Key Facts:</div>

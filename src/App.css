@@ -1,0 +1,17 @@
+.nav-link {
+
+    color: grey;
+
+}
+
+.nav-link:hover {
+
+    color: black;
+
+}
+
+.nav-link:active {
+
+    color: black;
+
+}
